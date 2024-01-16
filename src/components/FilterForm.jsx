@@ -30,7 +30,6 @@ const FilterForm = ({ onSelectChange, onPageChange }) => {
                placeholder="search"
                value={searchTerm}
                onChange={handleSearchChange}
-               x-model="search"
             />
             <div>
                <button
