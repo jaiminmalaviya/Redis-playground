@@ -4,12 +4,12 @@ import { redis } from '@/libs/redis'
 import { NextResponse } from 'next/server'
 
 export async function GET(req) {
-   try {
-      const searchParams = req.nextUrl.searchParams
-      const category = searchParams.get('category')
-      const page = parseInt(searchParams.get('page'), 10) || 1
-      const limit = ITEMS_PER_PAGE
+   const searchParams = req.nextUrl.searchParams
+   const category = searchParams.get('category')
+   const page = parseInt(searchParams.get('page'), 10) || 1
+   const limit = ITEMS_PER_PAGE
 
+   try {
       const hashKey = `category:${category || 'all'}:${page}`
 
       const categoryFilter = category ? { category: { equals: category } } : {}
