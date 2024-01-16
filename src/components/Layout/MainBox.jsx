@@ -19,6 +19,7 @@ const MainBox = () => {
    useEffect(() => {
       const fetchData = async () => {
          try {
+            setProducts([])
             setLoading(true)
             const response = await fetch(
                `/api/products?category=${filterOption}&page=${currentPage}`
