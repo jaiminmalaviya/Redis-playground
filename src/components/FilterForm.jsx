@@ -31,7 +31,7 @@ const FilterForm = ({ onSelectChange, onPageChange }) => {
                value={searchTerm}
                onChange={handleSearchChange}
             />
-            <div>
+            {/* <div>
                <button
                   type="submit"
                   className="flex items-center bg-blue-500 justify-center w-12 h-12 text-white rounded-r-lg"
@@ -51,7 +51,7 @@ const FilterForm = ({ onSelectChange, onPageChange }) => {
                      />
                   </svg>
                </button>
-            </div>
+            </div> */}
          </div>
 
          <select
